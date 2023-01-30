@@ -1,0 +1,17 @@
+table {
+    width: 50%;
+    margin: 0 auto;
+}
+
+thead {
+    text-align: left;
+}
+
+.user-about {
+    width: 400px;
+
+    /**Major Properties**/
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
