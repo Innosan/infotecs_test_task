@@ -1,13 +1,11 @@
 # 🌺 Infotecs Test Task
 
 Выполненное (почти) задание для стажировки в Infotecs.
+Доступно по адресу 
 
-Успел сделать почти все, кроме редактирования строк и
+Успел сделать почти все, кроме редактирования строк.
 
-## 🛠️ Used tech:
-<div id="used_tech">
-	<img width="48" style="margin-left: 10px;" title="Svelte" alt="Svelte" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/svelte/svelte-original.svg" />
-	<img width="48" style="margin-left: 10px;" title="Svelte" alt="Svelte" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" />
-	<img width="48" style="margin-left: 10px;" title="Svelte" alt="Svelte" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" />
-	<img width="48" style="margin-left: 10px;" title="Svelte" alt="Svelte" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" />
-</div>	
+К сожалению, ванильный JavaScript крайне ограничен, без какого-либо фреймворка
+любой функционал доюавлять тяжело, особенно когда не являешься мастером.
+
+Приложение не без странных решений, но, надеюсь, это только добавит моцивации взять меня. 
