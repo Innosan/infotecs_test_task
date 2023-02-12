@@ -1,17 +1,43 @@
-table {
+.users-table {
     width: 50%;
     margin: 0 auto;
+}
+
+.table-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.by-name, .user-firstname {
+    width: 15%;
+}
+
+.by-lastname, .user-lastname {
+    width: 15%;
+}
+
+.by-description, .user-about {
+    width: 40%;
+}
+
+.by-eyecolor, .user-eyecolor {
+    width: 7%;
 }
 
 thead {
     text-align: left;
 }
 
-.user-about {
-    width: 400px;
+.user {
+    display: flex;
+    justify-content: space-between;
+}
 
-    /**Major Properties**/
-    white-space:nowrap;
-    overflow:hidden;
-    text-overflow:ellipsis;
+.user-about {
+    width: 40%;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

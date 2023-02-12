@@ -9,18 +9,17 @@
     <title>Test Task</title>
 </head>
 <body>
-    <table>
-        <thead>
-        <tr>
-            <th>Имя</th>
-            <th>Фамилия</th>
-            <th>Описание</th>
-            <th>Цвет глаз</th>
-        </tr>
-        </thead>
-        <tbody id="table_content">
-        </tbody>
-    </table>
+    <div class="users-table">
+        <div class="table-nav">
+            <button class="filter by-name" id="firstName">firstName</button>
+            <button class="filter by-lastname" id="lastName">lastName</button>
+            <button class="filter by-description" id="about">Описание</button>
+            <button class="filter by-eyecolor" id="eyeColor">Цвет глаз</button>
+        </div>
+        <div id="table_content" class="table-body">
+            <!-- At this will be placed user data. -->
+        </div>
+    </div>
 </body>
 <script src="scripts/getUsers.js" type="module"></script>
 </html>
