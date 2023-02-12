@@ -4,7 +4,7 @@ let filterButtons = document.getElementsByClassName("filter");
 const itemsPerPage = 10;
 let currentPage = 1;
 
-let ascOrder = true;
+let ascOrder = true; // represents order status, true - ascending, false - descending
 
 const fetchUsers = () => {
 	return fetch("/data/users.json")
@@ -61,6 +61,8 @@ const displayUsers = (users) => {
 	const totalPages = Math.ceil(users.length / itemsPerPage);
 	const pagination = document.querySelector("#pagination_numbers");
 
+	pagination.innerHTML = "";
+
 	/**
 	 * Generating pagination buttons
 	 */
@@ -115,12 +117,30 @@ const sortUsers = (users, key) => {
 /**
  * Adding event listeners to every header button,
  * like First Name, Last Name etc.
+ *
+ * I could split this into 4 different buttons, like filterByFirstName etc.,
+ * with this implementation I would not have any problems with order status, active class,
+ * but code would look so much worse. So I don't know which way would be better.
  */
 for (let button of filterButtons) {
+	/**
+	 * This 'status' variable is a little workaround to represent current sort order,
+	 * because working with vanilla js is LITTLE tough,
+	 * I think this is an appropriate way to display current order status.
+	 */
+	const status = document.createElement("img");
+	button.appendChild(status);
+
 	button.addEventListener("click", (event) => {
 		const key = event.target.id.replace(" ", "");
 
 		ascOrder = ascOrder !== true;
+
+		if (ascOrder) {
+			status.src = "assets/icons/ui/ascend.svg";
+		} else {
+			status.src = "assets/icons/ui/descend.svg";
+		}
 
 		fetchUsers().then((users) => {
 			const sorted = sortUsers(users, key);
