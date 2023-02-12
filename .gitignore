@@ -1,2 +1,4 @@
 #ide config directory
 /.idea
+
+.editorconfig

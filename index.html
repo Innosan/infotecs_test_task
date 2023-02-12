@@ -11,11 +11,15 @@
 <body>
     <div class="users-table">
         <div class="table-nav">
-            <button class="filter by-name" id="firstName">firstName</button>
-            <button class="filter by-lastname" id="lastName">lastName</button>
+            <button class="filter by-name" id="firstName">Имя</button>
+            <button class="filter by-lastname" id="lastName">Фамилия</button>
             <button class="filter by-description" id="about">Описание</button>
             <button class="filter by-eyecolor" id="eyeColor">Цвет глаз</button>
         </div>
+        <nav class="pagination-container">
+            <div id="pagination_numbers" class="pagination-pages">
+            </div>
+        </nav>
         <div id="table_content" class="table-body">
             <!-- At this will be placed user data. -->
         </div>
