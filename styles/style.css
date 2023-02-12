@@ -3,17 +3,31 @@
     src: url("/fonts/Jost-VariableFont_wght.ttf");
 }
 
+:root {
+	font-family: Jost, sans-serif;
+
+	--text-color: rgb(0, 0, 0);
+
+	--btn-bg-color: rgba(211, 211, 211, 0.7);
+	--btn-bg-hover-color: rgba(169, 169, 169, 0.80);;
+
+	--main-shadow-color: rgb(0 0 0 / 25%);
+	--main-shadow-hover-color: rgb(0 0 0 / 45%);
+}
+
 html, button {
     font-family: Jost, sans-serif;
+}
+
+body {
+	margin: 20px 0 0;
 }
 
 button {
     font-weight: bold;
     font-size: 18px;
 
-    color: black;
-
-    background-color: rgba(211, 211, 211, 0.7);
+    background-color: var(--btn-bg-color);
     border: none;
     border-radius: 12px;
 
@@ -23,8 +37,28 @@ button {
 }
 
 button:hover {
-    background-color: rgba(169, 169, 169, 0.87);
+    background-color: var(--btn-bg-hover-color);
     border-radius: 18px;
+}
+
+/**
+	special status classes
+ */
+
+.active {
+	background-color: rgba(122, 122, 122, 0.7);
+}
+
+.show {
+	display: block !important;
+}
+
+/**
+	other
+ */
+
+.container {
+	display: flex;
 }
 
 .filter {
@@ -36,10 +70,6 @@ button:hover {
 	width: fit-content;
 	padding: 10px;
 	height: 40px;
-}
-
-.active {
-    background-color: rgba(122, 122, 122, 0.7);
 }
 
 .users-table {
@@ -68,8 +98,7 @@ button:hover {
     display: flex;
     justify-content: space-around;
 
-    box-shadow: 0 0 14px 0 rgb(0 0 0 / 25%);
-    color: black;
+    box-shadow: 0 0 14px 0 var(--main-shadow-color);
 
     border-radius: 20px ;
 
@@ -79,7 +108,7 @@ button:hover {
 }
 
 .user:hover {
-    box-shadow: 0 0 14px 0 rgb(0 0 0 / 45%);
+    box-shadow: 0 0 14px 0 var(--main-shadow-hover-color);
     margin-top: 10px;
     margin-bottom: 20px;
 }
@@ -103,4 +132,24 @@ button:hover {
 .pagination-container button {
     width: 60px;
     height: 40px;
+}
+
+/**
+	form styles
+ */
+
+.form {
+	display: none;
+
+	position: fixed;
+
+	height: fit-content;
+
+	top: 100px;
+	right: 60px;
+}
+
+label {
+	display: flex;
+	flex-direction: column;
 }

@@ -9,21 +9,52 @@
     <title>Test Task</title>
 </head>
 <body>
-    <div class="users-table">
-        <div class="table-nav">
-            <button class="filter by-name" id="firstName">Имя</button>
-            <button class="filter by-lastname" id="lastName">Фамилия</button>
-            <button class="filter by-description" id="about">Описание</button>
-            <button class="filter by-eyecolor" id="eyeColor">Цвет глаз</button>
-        </div>
-        <nav class="pagination-container">
-            <div id="pagination_numbers" class="pagination-pages">
-            </div>
-        </nav>
-        <div id="table_content" class="table-body">
-            <!-- At this will be placed user data. -->
-        </div>
-    </div>
+<div class="container">
+		<div class="users-table">
+
+			<!-- Table filter buttons -->
+			<div class="table-nav">
+				<button class="filter by-name" id="firstName">Имя</button>
+				<button class="filter by-lastname" id="lastName">Фамилия</button>
+				<button class="filter by-description" id="about">Описание</button>
+				<button class="filter by-eyecolor" id="eyeColor">Цвет глаз</button>
+			</div>
+
+			<!-- Pagination -->
+			<nav class="pagination-container">
+				<div id="pagination_numbers" class="pagination-pages">
+				</div>
+			</nav>
+
+			<!-- In this div user data will be placed. -->
+			<div id="table_content" class="table-body">
+			</div>
+		</div>
+		<div class="form" id="form">
+			<div class="input-group" id="input_group">
+				<label for="new_firstname">
+					Новое имя:
+					<input type="text" name="" id="new_firstname">
+				</label>
+				<label for="new_lastname">
+					Новая фамилия:
+					<input type="text" name="" id="new_lastname">
+				</label>
+				<label for="new_description">
+					Новое описание:
+					<input type="text" name="" id="new_description">
+				</label>
+				<label for="new_eyecolor">
+					Новый цвет:
+					<input type="text" name="" id="new_eyecolor">
+				</label>
+			</div>
+			<div class="form-btns">
+				<button class="edit" id="edit">Изменить</button>
+				<button class="close" id="close">Отменить</button>
+			</div>
+		</div>
+</div>
 </body>
 <script src="scripts/getUsers.js" type="module"></script>
 </html>

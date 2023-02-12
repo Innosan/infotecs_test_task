@@ -44,16 +44,39 @@ const displayUsers = (users) => {
 		const row = document.createElement("div"); // row represents our user
 		row.classList.add("user");
 
+		// row.addEventListener("click", (event) => {
+		// 	// console.log(event.target);
+		// 	let editForm = document.getElementById("form");
+		//
+		// 	let newFirstName = document.getElementById("new_firstname");
+		// 	let newLastName = document.getElementById("new_lastname");
+		// 	let newDescription = document.getElementById("new_description");
+		// 	let newEyeColor = document.getElementById("new_eyecolor");
+		//
+		// 	let editButton = document.getElementById("edit");
+		// 	let closeButton = document.getElementById("close");
+		//
+		// 	editForm.classList.toggle("show");
+		//
+		// 	console.log(row);
+		//
+		// 	editButton.addEventListener("click", () => {
+		// 		console.log(row);
+		// 	});
+		// });
+		//
+		// row.removeEventListener("click", this);
+
 		row.innerHTML = `
-      <p class="user-firstname">${user.name.firstName}</p>
-      <p class="user-lastname">${user.name.lastName}</p>
-      <p class="user-about">${user.about}</p>
-      <div class="user-eyecolor">
-          <svg viewBox="0 0 20 20">
-              <circle cx="10" cy="10" r="5" fill="${user.eyeColor}"/>
-          </svg>
-      </div>
-    `;
+      	<p class="user-firstname">${user.name.firstName}</p>
+      	<p class="user-lastname">${user.name.lastName}</p>
+      	<p class="user-about">${user.about}</p>
+      	<div class="user-eyecolor">
+          	<svg viewBox="0 0 20 20">
+              	<circle cx="10" cy="10" r="5" fill="${user.eyeColor}"/>
+          	</svg>
+      	</div>
+    	`;
 
 		tableContent.appendChild(row); // adding user row to the table
 	});
