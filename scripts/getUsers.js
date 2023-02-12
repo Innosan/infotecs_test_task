@@ -68,10 +68,10 @@ const displayUsers = (users) => {
 		// row.removeEventListener("click", this);
 
 		row.innerHTML = `
-      	<p class="user-firstname">${user.name.firstName}</p>
-      	<p class="user-lastname">${user.name.lastName}</p>
-      	<p class="user-about">${user.about}</p>
-      	<div class="user-eyecolor">
+      	<p class="user-firstname" id="userfield">${user.name.firstName}</p>
+      	<p class="user-lastname" id="userfield">${user.name.lastName}</p>
+      	<p class="user-about" id="userfield">${user.about}</p>
+      	<div class="user-eyecolor" id="userfield">
           	<svg viewBox="0 0 20 20">
               	<circle cx="10" cy="10" r="5" fill="${user.eyeColor}"/>
           	</svg>
@@ -171,6 +171,22 @@ for (let button of filterButtons) {
 		});
 	});
 }
+
+let hideColumnSelector = document.getElementById("hideColumn");
+
+hideColumnSelector.addEventListener("change", (event) => {
+	let columnsToHide = document.querySelectorAll(`.${event.target.value}`);
+
+	for (let column of columnsToHide) {
+		column.classList.add("hide");
+	}
+	if (event.target.value === "showAll") {
+		let columnsToShow = document.querySelectorAll("#userfield");
+		for (let column of columnsToShow) {
+			column.classList.remove("hide");
+		}
+	}
+});
 
 fetchUsers().then((users) => {
 	displayUsers(users);

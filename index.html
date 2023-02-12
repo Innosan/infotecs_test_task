@@ -18,6 +18,16 @@
 				<button class="filter by-lastname" id="lastName">Фамилия</button>
 				<button class="filter by-description" id="about">Описание</button>
 				<button class="filter by-eyecolor" id="eyeColor">Цвет глаз</button>
+				<label for="hideColumn"></label><select class="hide-selector" id="hideColumn">
+					Скрыть колонку
+					<option value="showAll" selected>
+						Ничего не скрывать
+					</option>
+					<option value="user-firstname">Имя</option>
+					<option value="user-lastname">Фамилия</option>
+					<option value="user-about">Описание</option>
+					<option value="user-eyecolor">Цвет глаз</option>
+				</select>
 			</div>
 
 			<!-- Pagination -->

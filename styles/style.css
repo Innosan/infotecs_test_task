@@ -53,6 +53,10 @@ button:hover {
 	display: block !important;
 }
 
+.hide {
+	display: none !important;
+}
+
 /**
 	other
  */
