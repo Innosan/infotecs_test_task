@@ -7,7 +7,7 @@ let currentPage = 1;
 let ascOrder = true; // represents order status, true - ascending, false - descending
 
 const fetchUsers = () => {
-	return fetch("/data/users.json")
+	return fetch("../infotecs_test_task/data/users.json")
 		.then((response) => {
 			return response.json();
 		})
